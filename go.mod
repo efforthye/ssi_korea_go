@@ -13,6 +13,8 @@ require (
 
 require (
 	github.com/btcsuite/btcutil v1.0.2 // indirect
+	github.com/getlantern/deepcopy v0.0.0-20160317154340-7f45deb8130a // indirect
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/mr-tron/base58 v1.1.0 // indirect
