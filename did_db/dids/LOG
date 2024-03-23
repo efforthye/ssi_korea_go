@@ -83,3 +83,113 @@
 13:32:17.844262 db@close closing
 13:32:17.844266 table@build exiting
 13:32:17.844392 db@close done T·129.25µs
+=============== Mar 23, 2024 (KST) ===============
+13:33:57.236619 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:33:57.238308 version@stat F·[6] S·844B[844B] Sc·[1.50]
+13:33:57.238354 db@open opening
+13:33:57.238502 journal@recovery F·1
+13:33:57.238857 journal@recovery recovering @18
+13:33:57.243854 memdb@flush created L0@20 N·1 S·141B "did..l12,v13":"did..l12,v13"
+13:33:57.244715 version@stat F·[7] S·985B[985B] Sc·[1.75]
+13:33:57.262736 db@janitor F·9 G·0
+13:33:57.262812 db@open done T·24.432916ms
+13:33:57.262910 table@compaction L0·6 -> L1·0 S·830B Q·14
+13:33:57.263036 table@build exiting
+13:33:57.263018 db@close closing
+13:33:57.263208 db@close done T·189.583µs
+=============== Mar 23, 2024 (KST) ===============
+13:38:33.293464 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:38:33.294959 version@stat F·[7] S·985B[985B] Sc·[1.75]
+13:38:33.294993 db@open opening
+13:38:33.295134 journal@recovery F·1
+13:38:33.295608 journal@recovery recovering @21
+13:38:33.303806 memdb@flush created L0@23 N·1 S·448B "did..l12,v15":"did..l12,v15"
+13:38:33.304372 version@stat F·[8] S·1KiB[1KiB] Sc·[2.00]
+13:38:33.324664 db@janitor F·10 G·0
+13:38:33.324773 db@open done T·29.7575ms
+13:38:33.324975 table@compaction L0·7 -> L1·0 S·1KiB Q·16
+13:38:33.326109 db@close closing
+13:38:33.326685 db@write was delayed N·1 T·1.176792ms
+13:38:33.326765 db@close done T·657.708µs
+=============== Mar 23, 2024 (KST) ===============
+13:39:59.598865 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:39:59.599946 version@stat F·[8] S·1KiB[1KiB] Sc·[2.00]
+13:39:59.599986 db@open opening
+13:39:59.600093 journal@recovery F·1
+13:39:59.600789 journal@recovery recovering @24
+13:39:59.606910 memdb@flush created L0@26 N·1 S·448B "did..l12,v17":"did..l12,v17"
+13:39:59.608437 version@stat F·[9] S·1KiB[1KiB] Sc·[2.25]
+13:39:59.628579 db@janitor F·11 G·0
+13:39:59.628641 db@open done T·28.636125ms
+13:39:59.628784 table@compaction L0·8 -> L1·0 S·1KiB Q·18
+13:39:59.629818 db@close closing
+13:39:59.634174 table@build created L1@29 N·1 S·448B "did..l12,v17":"did..l12,v17"
+13:39:59.634233 table@build exiting
+13:39:59.634246 table@build revert @29
+13:39:59.634498 db@write was delayed N·1 T·1.01275ms
+13:39:59.634580 db@close done T·4.76225ms
+=============== Mar 23, 2024 (KST) ===============
+13:39:59.897079 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:39:59.897417 version@stat F·[9] S·1KiB[1KiB] Sc·[2.25]
+13:39:59.897445 db@open opening
+13:39:59.897545 journal@recovery F·1
+13:39:59.898309 journal@recovery recovering @27
+13:39:59.902916 memdb@flush created L0@29 N·1 S·448B "did..l12,v19":"did..l12,v19"
+13:39:59.903642 version@stat F·[10] S·2KiB[2KiB] Sc·[2.50]
+13:39:59.919738 db@janitor F·12 G·0
+13:39:59.919819 db@open done T·22.354875ms
+13:39:59.919895 table@compaction L0·9 -> L1·0 S·2KiB Q·20
+13:39:59.921119 db@close closing
+13:39:59.925023 table@build created L1@32 N·1 S·448B "did..l12,v19":"did..l12,v19"
+13:39:59.925048 table@build exiting
+13:39:59.925057 table@build revert @32
+13:39:59.925304 db@write was delayed N·1 T·1.172958ms
+13:39:59.925360 db@close done T·4.242833ms
+=============== Mar 23, 2024 (KST) ===============
+13:40:01.015520 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:40:01.015857 version@stat F·[10] S·2KiB[2KiB] Sc·[2.50]
+13:40:01.015885 db@open opening
+13:40:01.015994 journal@recovery F·1
+13:40:01.016948 journal@recovery recovering @30
+13:40:01.023056 memdb@flush created L0@32 N·1 S·448B "did..l12,v21":"did..l12,v21"
+13:40:01.025104 version@stat F·[11] S·2KiB[2KiB] Sc·[2.75]
+13:40:01.043809 db@janitor F·13 G·0
+13:40:01.043878 db@open done T·27.975833ms
+13:40:01.043976 table@compaction L0·10 -> L1·0 S·2KiB Q·22
+13:40:01.051530 db@close closing
+13:40:01.051723 table@build created L1@35 N·1 S·448B "did..l12,v21":"did..l12,v21"
+13:40:01.051753 table@build exiting
+13:40:01.051768 table@build revert @35
+13:40:01.052106 db@write was delayed N·1 T·3.57ms
+13:40:01.052207 db@close done T·681.708µs
+=============== Mar 23, 2024 (KST) ===============
+13:41:24.738213 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:41:24.738889 version@stat F·[11] S·2KiB[2KiB] Sc·[2.75]
+13:41:24.738921 db@open opening
+13:41:24.739037 journal@recovery F·1
+13:41:24.740058 journal@recovery recovering @33
+13:41:24.746608 memdb@flush created L0@35 N·1 S·448B "did..l12,v23":"did..l12,v23"
+13:41:24.747670 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+13:41:24.767657 db@janitor F·14 G·0
+13:41:24.767759 db@open done T·28.814958ms
+13:41:24.767939 table@compaction L0·11 -> L1·0 S·2KiB Q·24
+13:41:24.768883 db@close closing
+13:41:24.773757 table@build created L1@38 N·1 S·448B "did..l12,v23":"did..l12,v23"
+13:41:24.773969 table@build exiting
+13:41:24.774007 table@build revert @38
+13:41:24.774403 db@close done T·5.518958ms
+=============== Mar 23, 2024 (KST) ===============
+13:46:17.856013 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+13:46:17.856390 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+13:46:17.856419 db@open opening
+13:46:17.856524 journal@recovery F·1
+13:46:17.857444 journal@recovery recovering @36
+13:46:17.859482 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+13:46:17.880783 db@janitor F·14 G·0
+13:46:17.880837 db@open done T·24.397708ms
+13:46:17.880910 table@compaction L0·11 -> L1·0 S·2KiB Q·24
+13:46:17.881760 db@close closing
+13:46:17.887358 table@build created L1@40 N·1 S·448B "did..l12,v23":"did..l12,v23"
+13:46:17.887467 table@build exiting
+13:46:17.887479 table@build revert @40
+13:46:17.887743 db@close done T·5.982083ms
