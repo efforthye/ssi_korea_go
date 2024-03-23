@@ -80,28 +80,29 @@ func ParseAndVerifyJwtForVC(tokenString string) (bool, *JwtClaims, error) {
 	return false, nil, err
 }
 
-/* VP를 먼저 구현하고 이놈을 활성화 시켜야 에러가 안 남
+// VP를 먼저 구현하고 이놈을 활성화 시켜야 에러가 안 남
+// 여기서의 tokenString은 이제 VC가 아니라 VP임.
 func ParseAndVerifyJwtForVP(tokenString string) (bool, *JwtClaimsForVP, error) {
-	//개별적으로 내부 VC들을 다시 다 검증해야 한다.
+	// 개별적으로 내부 VC들을 다시 다 검증해야 한다.
 	parseToken, _ := jwt.ParseWithClaims(tokenString, &JwtClaimsForVP{}, func(token *jwt.Token) (interface{}, error) {
 
-		//jwt의 암호화 알고리즘이 맞는지 체크한다.
+		// jwt의 암호화 알고리즘이 맞는지 체크한다.
 		if _, ok := token.Method.(*jwt.SigningMethodECDSA); !ok {
 			log.Fatalln("unexpected signing method.")
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 		}
 
-		//발급자의 DID를 추출한다.
+		// 발급자(홀더, VP를 발급한 사람.)의 DID를 추출한다.
 		claims := token.Claims.(*JwtClaims)
-		issDid := claims.Issuer
+		issDid := claims.Issuer // 홀더의 DID이다.
 
-		//Resolve한다.
+		// 홀더의 DID Document를 가져온다. (Resolve한다..)
 		didDocumentStr, err := ResolveDid(issDid)
 		if err != nil {
 			log.Printf("Failed to Resolve DID.\nError: %x\n", err)
 		}
 
-		//Json string을 DID Document 객체로 생성한다.
+		//Json string을 DID Document 객체로 변환한다.
 		didDocument, err := NewDIDDocumentForString(didDocumentStr)
 		if err != nil {
 			log.Printf("Failed generate DID Document from string.\nError: %x\n", err)
@@ -110,22 +111,28 @@ func ParseAndVerifyJwtForVP(tokenString string) (bool, *JwtClaimsForVP, error) {
 		// TODO: 키 ID(위의 kid)에 해당하는 키 값 구하기.
 		pbKeyBaseMultibase := didDocument.VerificationMethod[0].PublicKeyMultibase
 		_, bytePubKey, err := multibase.Decode(pbKeyBaseMultibase)
+		// 우리가 사용할 자료형으로 퍼블릭키를 변환한다.
 		pbKey, err := x509.ParsePKIXPublicKey(bytePubKey)
 
 		return pbKey, nil
 	})
 
 	fmt.Println("parseToken: ", parseToken)
+	// JWT의 Claim이다.
 	claims, ok := parseToken.Claims.(*JwtClaimsForVP)
 	fmt.Println("claims: ", claims)
 
 	if ok && parseToken.Valid {
 		if &claims.Vp != nil {
+			// VP 안에있는 VC 리스트를 가져온다.
 			vpMapClaims := claims.Vp
 			vcList := vpMapClaims.VerifiableCredential
 
+			// VC들을 루프를 돌면서 재검증을 해야한다.
+			// 꼭 전체가 다 검증 성공해야만 하는것은 아니지만 일단 그렇게 되어있다.
 			for idx, vcToken := range vcList {
 				fmt.Printf("VC[%d]: %s", idx, vcToken)
+				// VC를 검증하는 함수(Resolve 포함!!)
 				verify, _, err := ParseAndVerifyJwtForVC(vcToken)
 				if !verify || err != nil {
 					log.Printf("Failed to verify VC[%d] in VP.", idx)
@@ -144,4 +151,5 @@ func ParseAndVerifyJwtForVP(tokenString string) (bool, *JwtClaimsForVP, error) {
 
 	return true, claims, nil
 }
-*/
+
+// 여기까지였음.
