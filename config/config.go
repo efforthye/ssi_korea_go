@@ -17,7 +17,7 @@ func init() {
 	// config 파일의 환경변수 값을 가져온다.
 	configFileName := os.Getenv("CONFIG_FILE")
 	if configFileName == "" {
-		configFileName = "config.json"
+		configFileName = "./config/config.json"
 	}
 	SystemConfig = loadConfigration(configFileName)
 }

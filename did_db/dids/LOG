@@ -224,3 +224,30 @@
 14:00:11.800083 version@stat F·[12 1] S·3KiB[3KiB 473B] Sc·[3.00 0.00]
 14:00:11.808512 table-move@commit exiting
 14:00:11.808598 db@close done T·8.553208ms
+=============== Mar 23, 2024 (KST) ===============
+14:02:53.038566 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:02:53.039254 version@stat F·[12 1] S·3KiB[3KiB 473B] Sc·[3.00 0.00]
+14:02:53.039271 db@open opening
+14:02:53.039346 journal@recovery F·1
+14:02:53.039947 journal@recovery recovering @43
+14:02:53.040729 version@stat F·[12 1] S·3KiB[3KiB 473B] Sc·[3.00 0.00]
+14:02:53.067094 db@janitor F·15 G·0
+14:02:53.067117 db@open done T·27.837916ms
+14:02:53.067162 table@compaction L0·11 -> L1·0 S·2KiB Q·26
+14:02:53.068340 db@close closing
+14:02:53.069115 db@write was delayed N·1 T·1.161583ms
+14:02:53.069148 db@close done T·808.709µs
+=============== Mar 23, 2024 (KST) ===============
+14:02:53.070623 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:02:53.070768 version@stat F·[12 1] S·3KiB[3KiB 473B] Sc·[3.00 0.00]
+14:02:53.070781 db@open opening
+14:02:53.070831 journal@recovery F·1
+14:02:53.071277 journal@recovery recovering @45
+14:02:53.075570 memdb@flush created L0@47 N·1 S·473B "did..K7v,v27":"did..K7v,v27"
+14:02:53.076175 version@stat F·[13 1] S·4KiB[3KiB 473B] Sc·[3.25 0.00]
+14:02:53.092776 db@janitor F·16 G·0
+14:02:53.092798 db@open done T·22.00925ms
+14:02:53.092820 table@move L0@47 -> L1
+14:02:53.092852 db@close closing
+14:02:53.092858 table-move@commit exiting
+14:02:53.092904 db@close done T·53.125µs
