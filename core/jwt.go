@@ -61,6 +61,7 @@ func ParseAndVerifyJwtForVC(tokenString string) (bool, *JwtClaims, error) {
 		_ = kid
 
 		// 일단 하나만 등록하는 것을 전제로 한다. (임시)
+		// 지금은 첫번째 것을 가져오지만, 실제로는 키값이 일치하는 항목을 가져오도록 꼭 변경해 주어야 한다.
 		pbKeyBaseMultibase := didDocument.VerificationMethod[0].PublicKeyMultibase
 		// 퍼블릭키로 해당 VC를 검증해야 한다.
 		_, bytePubKey, err := multibase.Decode(pbKeyBaseMultibase)
