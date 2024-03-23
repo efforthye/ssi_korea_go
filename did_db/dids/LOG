@@ -517,3 +517,19 @@
 16:29:40.935734 table-move@commit exiting
 16:29:40.935796 db@write was delayed N·1 T·1.179166ms
 16:29:40.935819 db@close done T·3.983792ms
+=============== Mar 23, 2024 (KST) ===============
+16:36:48.110461 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:36:48.111153 version@stat F·[12 16] S·10KiB[3KiB 7KiB] Sc·[3.00 0.00]
+16:36:48.111176 db@open opening
+16:36:48.111266 journal@recovery F·1
+16:36:48.111769 journal@recovery recovering @96
+16:36:48.119050 memdb@flush created L0@98 N·1 S·466B "did..JHM,v57":"did..JHM,v57"
+16:36:48.119709 version@stat F·[13 16] S·10KiB[3KiB 7KiB] Sc·[3.25 0.00]
+16:36:48.143596 db@janitor F·31 G·0
+16:36:48.143626 db@open done T·32.44075ms
+16:36:48.143650 table@move L0@98 -> L1
+16:36:48.143690 version@stat F·[12 17] S·10KiB[3KiB 7KiB] Sc·[3.00 0.00]
+16:36:48.148533 db@close closing
+16:36:48.150993 table-move@commit exiting
+16:36:48.151082 db@write was delayed N·1 T·1.1515ms
+16:36:48.151107 db@close done T·2.574ms
