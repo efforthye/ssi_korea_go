@@ -193,3 +193,34 @@
 13:46:17.887467 table@build exiting
 13:46:17.887479 table@build revert @40
 13:46:17.887743 db@close done T·5.982083ms
+=============== Mar 23, 2024 (KST) ===============
+14:00:11.728155 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:00:11.728410 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+14:00:11.728425 db@open opening
+14:00:11.728479 journal@recovery F·1
+14:00:11.728737 journal@recovery recovering @38
+14:00:11.729229 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+14:00:11.767787 db@janitor F·14 G·0
+14:00:11.767838 db@open done T·39.402417ms
+14:00:11.767920 table@compaction L0·11 -> L1·0 S·2KiB Q·24
+14:00:11.768946 db@close closing
+14:00:11.772621 table@build created L1@42 N·1 S·448B "did..l12,v23":"did..l12,v23"
+14:00:11.772640 table@build exiting
+14:00:11.772652 table@build revert @42
+14:00:11.772800 db@write was delayed N·1 T·1.013292ms
+14:00:11.772853 db@close done T·3.908083ms
+=============== Mar 23, 2024 (KST) ===============
+14:00:11.775735 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:00:11.776106 version@stat F·[12] S·3KiB[3KiB] Sc·[3.00]
+14:00:11.776130 db@open opening
+14:00:11.776206 journal@recovery F·1
+14:00:11.776608 journal@recovery recovering @40
+14:00:11.781596 memdb@flush created L0@42 N·1 S·473B "did..rAQ,v25":"did..rAQ,v25"
+14:00:11.781837 version@stat F·[13] S·3KiB[3KiB] Sc·[3.25]
+14:00:11.799891 db@janitor F·15 G·0
+14:00:11.799936 db@open done T·23.79425ms
+14:00:11.800015 table@move L0@42 -> L1
+14:00:11.800043 db@close closing
+14:00:11.800083 version@stat F·[12 1] S·3KiB[3KiB 473B] Sc·[3.00 0.00]
+14:00:11.808512 table-move@commit exiting
+14:00:11.808598 db@close done T·8.553208ms

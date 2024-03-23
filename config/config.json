@@ -3,6 +3,6 @@
     "verifier_addr": "localhost:1122",
     "registrar_addr": "localhost:9000",
     "registrar_gateway_addr": "localhost:9100",
-    "resolver_addr": "localhost:9001",
+    "resolver_addr": "localhost:55002",
     "resolver_gateway_addr": "localhost:9101"
 }
