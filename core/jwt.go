@@ -93,7 +93,7 @@ func ParseAndVerifyJwtForVP(tokenString string) (bool, *JwtClaimsForVP, error) {
 		}
 
 		// 발급자(홀더, VP를 발급한 사람.)의 DID를 추출한다.
-		claims := token.Claims.(*JwtClaims)
+		claims := token.Claims.(*JwtClaimsForVP)
 		issDid := claims.Issuer // 홀더의 DID이다.
 
 		// 홀더의 DID Document를 가져온다. (Resolve한다..)
